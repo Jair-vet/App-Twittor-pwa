@@ -46,7 +46,7 @@ self.addEventListener('activate', e => {
 
     const respuesta = caches.keys().then( keys => {
         keys.forEach( key => {
-            console.log(key);
+      
             // Borra la version del cache vieja
             if (  key !== STATIC_CACHE && key.includes('static') ) {
                 return caches.delete(key);
